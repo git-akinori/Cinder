@@ -2,9 +2,10 @@
 #include "cinder/gl/gl.h"
 #include "cinder/Camera.h"
 
+#include "Objects.h"
+
 using namespace ci;
 using namespace ci::app;
-
 
 class TemplateProjectApp : public AppNative {
 	CameraPersp camera;
@@ -22,6 +23,7 @@ void TemplateProjectApp::setup()
 
 void TemplateProjectApp::mouseDown(MouseEvent event)
 {
+	
 }
 
 void TemplateProjectApp::update()
@@ -34,7 +36,6 @@ void TemplateProjectApp::draw()
 
 	gl::pushModelView(); {
 		gl::translate(getWindowSize() / 2);
-		gl::drawSolidCircle(Vec2f(0, 0), 10, 10);
 	} gl::popModelView();
 }
 
